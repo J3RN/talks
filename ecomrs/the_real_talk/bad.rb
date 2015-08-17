@@ -19,7 +19,7 @@ class TestClass
 
   # Reduce
   def reduce
-    acc = 0;
+    acc = 0
     @array.each do |x|
       acc += x
     end

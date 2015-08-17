@@ -1,7 +1,7 @@
-require_relative '../bad.rb'
+require_relative '../good.rb'
 
-describe TestClass do
-  subject{ TestClass.new }
+describe NewClass do
+  subject{ NewClass.new }
   let(:fake_arr) { (0..1000000).to_a }
 
   describe '#map' do

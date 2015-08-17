@@ -1,25 +1,14 @@
 class AdvancedExamples
   # Merge this array of hashes together
   def merge_hashes(hashes)
-    new_hash = {}
-
-    hashes.each do |hash|
-      new_hash.merge!(hash)
-    end
-
-    new_hash
+    hashes.reduce({}, &:merge)
   end
 
   # Get the nested value, specified path a path (Array) of keys
   def get_nested_value(keys)
     hash = {"deeply" => {"nested" => {"value" => 42}}}
 
-    new_hash = hash.dup
-    keys.each do |key|
-      new_hash = new_hash[key]
-    end
-
-    new_hash
+    keys.reduce(hash) { |acc, x| acc[x] }
   end
 
   # Return an subset of the given array containing only keys that exist in the
@@ -28,16 +17,14 @@ class AdvancedExamples
     hash = {"deeply" => {"nested" => {"value" => 42}},
             "real" => {"keys" => { "not_me" => 31}}}
 
-    real_keys = []
-    temp_hash = hash.dup
-
-    keys.each do |key|
-      if temp_hash[key]
-        temp_hash = temp_hash[key]
-        real_keys << key
+    _, path = keys.reduce([hash, []]) do |acc, x|
+      if acc[0][key]
+        [acc[0][key], acc[1] << key]
+      else
+        [ {}, acc[1] ]
       end
     end
 
-    real_keys
+    path
   end
 end
