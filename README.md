@@ -1,6 +1,6 @@
 # J3RN's Talks
 
-This is a collection of [J3RN]'s talks, in the best format that they can be recreated. Naturally, many of them are missing.
+This is a collection of [J3RN](http://j3rn.com)'s talks, in the best format that they can be recreated. Naturally, many of them are missing.
 
 ## Here's what we do have
 
