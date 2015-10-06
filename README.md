@@ -12,4 +12,3 @@ This is a collection of [J3RN](http://j3rn.com)'s talks, in the best format that
 | [ECOMRS](ecomrs/)                 | One of my favorite talk! [Elegant Collection Operations with Map, Reduce and Select!](https://www.youtube.com/watch?v=4POSMbOWb-U&t=10m0s) | Uh... `cd the_real_talk` and `vim` around is probably your best bet |
 | [Elixir talk](elixir-talk/)       | A basic talk on Elixir. Essentially just explained the code in the files.                 | `vim <files>` |
 | [Weblog](weblog/)                 | Intro to Rails. One of my sassier talks.                                                  | `grunt serve` |
-|-----------------------------------|-------------------------------------------------------------------------------------------|------------|
