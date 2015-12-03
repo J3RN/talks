@@ -13,3 +13,4 @@ This is a collection of [J3RN](http://j3rn.com)'s talks, in the best format that
 | [Elixir talk](elixir-talk/)       | A basic talk on Elixir. Essentially just explained the code in the files.                 | `vim <files>` |
 | [Weblog](weblog/)                 | Intro to Rails. One of my sassier talks.                                                  | `grunt serve` |
 | [Sinatra](sinatra/)               | A dive into Sinatra's cooler features.                                                    | `grunt serve` |
+| [Redis](redis/)                   | A introductory talk discussing some of Redis' features.                                   | `grunt serve` |
