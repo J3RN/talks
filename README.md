@@ -14,3 +14,4 @@ This is a collection of [J3RN](http://j3rn.com)'s talks, in the best format that
 | [Weblog](weblog/)                 | Intro to Rails. One of my sassier talks.                                                  | `grunt serve` |
 | [Sinatra](sinatra/)               | A dive into Sinatra's cooler features.                                                    | `grunt serve` |
 | [Redis](redis/)                   | A introductory talk discussing some of Redis' features.                                   | `grunt serve` |
+| [ES2015 Functional Features](ES2015/) | How to refactor your JavaScript code using ES2015's new functional features       | `grunt serve` |
