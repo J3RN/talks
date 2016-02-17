@@ -15,3 +15,4 @@ This is a collection of [J3RN](http://j3rn.com)'s talks, in the best format that
 | [Redis](redis/)                   | A introductory talk discussing some of Redis' features.                                   | `grunt serve` |
 | [ES2015 Functional Features](ES2015/) | How to refactor your JavaScript code using ES2015's new functional features       | `grunt serve` |
 | [Learning JavaScript with Candy Box](intro-to-javascript/) | As promised, a talk on learning JavaScript by writing the game Candy Box. Unfortunately, most of this talk was live coding, so not much content | `grunt serve` |
+| [REVIM](revim/)                   | Modeled after REWORK, this talk outlines how to learn to use Vim better, and a few tips.  | `grunt serve` |
