@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>How the Web Works</title>
+
+		<meta name="description" content="A brief overview of the web">
+		<meta name="author" content="Jonathan Arnett">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+    <style>
+      img {
+        max-height: 80vh !important;
+      }
+
+      ol {
+        width: 25vw;
+      }
+    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>ACM-W + CWDG</h1>
+				</section>
+
+				<section>
+					<h1>How the Internet Works</h1>
+          <h3 class="fragment">A story in three parts</h3>
+					<p>
+            <small>by Jonathan Arnett</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>What's it made of?</h2>
+				</section>
+
+        <section>
+          <h2>Internet protocol (TCP/IP) suite</h2>
+          <ol>
+            <li>Link Layer</li>
+            <li>Internet Layer</li>
+            <li>Transport Layer</li>
+            <li>Application Layer</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Link Layer</h2>
+          <p class="fragment">Ethernet, DSL, MAC</p>
+          <p class="fragment">Responsible for handling the link to machines it is physically connected to (sort of)</p>
+        </section>
+
+        <section>
+          <h2>Internet Layer</h2>
+          <p class="fragment">IP (v4, v6), ICMP</p>
+          <p class="fragment">Packet forwarding, routing</p>
+        </section>
+
+        <section>
+          <h2>Transport Layer</h2>
+          <p class="fragment">TCP, UDP</p>
+          <p class="fragment">Host-to-Host connection abstraction, reliability</p>
+        </section>
+
+        <section>
+          <blockquote class="fragment">
+            TCP walks into a bar and asks the bartender "Can I have a beer?"<br>
+            "You want a beer?" asks the bartender.<br>
+            "Yes, I want a beer" says TCP.
+          </blockquote>
+        </section>
+
+        <section>
+          <blockquote class="fragment">
+            I was going to tell a UDP joke, but I wasn't sure if you would get it.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Application Layer</h2>
+          <p class="fragment">HTTP, DNS, IMAP, NTP, etc</p>
+          <p class="fragment">Protocols for process-to-process communication</p>
+        </section>
+
+        <section>
+          <h2>The Anatomy of an HTTP Request</h2>
+          <img src="img/grays.jpg" />
+        </section>
+
+        <section>
+          <h2>First, an demo</h2>
+        </section>
+
+        <section>
+          <h2>DNS</h2>
+          <code class="fragment" data-markdown>dig</code>
+        </section>
+
+        <section>
+          <h2>Routing</h2>
+          <code class="fragment" data-markdown>traceroute</code>
+        </section>
+
+        <section>
+          <h2>HTTP</h2>
+          <ul>
+            <li class="fragment">GET</li>
+            <li class="fragment">POST</li>
+            <li class="fragment">PUT</li>
+            <li class="fragment">DELETE</li>
+            <li class="fragment">Others</li>
+          </ul>
+          <code class="fragment" data-markdown>netcat</code>
+        </section>
+
+        <section>
+          <h2>IP Addresses</h2>
+          <p class="fragment">IPv4: 2^32 possible addresses (4B)</p>
+          <p class="fragment">IPv4: 2^128 possible addresses (421v)</p>
+        </section>
+
+        <section>
+          <h2>NAT</h2>
+          <p class="fragment">Underneath TCP, it's stateless IP packets</p>
+          <p class="fragment"><code>ifconfig en0</code></p>
+          <img class="fragment" src="img/NAT.jpg" />
+        </section>
+
+        <section>
+          <h2>A <i>very</i> simple webapp</h2>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
