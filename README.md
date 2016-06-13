@@ -17,3 +17,4 @@ This is a collection of [J3RN](http://j3rn.com)'s talks, in the best format that
 | [Learning JavaScript with Candy Box](intro-to-javascript/) | As promised, a talk on learning JavaScript by writing the game Candy Box. Unfortunately, most of this talk was live coding, so not much content | `grunt serve` |
 | [REVIM](revim/)                   | Modeled after REWORK, this talk outlines how to learn to use Vim better, and a few tips.  | `grunt serve` |
 | [How the Internet Works](how-the-internet-works/) | A talk on the very basics of the web, in three parts.                     | `grunt serve` |
+| [Tmuxinator and Open Source](mux-oss/) | A talk that mentions Tmuxinator, but is about being a good OSS community member | `grunt serve` |
