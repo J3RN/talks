@@ -57,7 +57,7 @@ foo(bar: 'baz')
 					</section>
 					<section>
 						<h2>
-							<a href="https://github.com/tmuxinator/tmuxinator/blob/40eab76e01b8be51fccd94135089c581cea2f122/lib/tmuxinator/config.rb#L115-L130">
+							<a href="https://github.com/tmuxinator/tmuxinator/blob/40eab76e01b8be51fccd94135089c581cea2f122/lib/tmuxinator/config.rb#L115">
 								Real World Example
 							</a>
 						</h2>
@@ -96,7 +96,7 @@ foo(bar: 'baz')
 				<section>
 					<section>
 						<h2>Blocks, Procs, and Lambdas</h2>
-						<img src="img/blocks_procs_and_lambdas.jpg" >
+						<img src="images/blocks_procs_and_lambdas.jpg" >
 					</section>
 					<section>
 						<h2>Blocks</h2>
@@ -181,7 +181,7 @@ foo #=> nil
 				</section>
 				<section>
 					<section>
-						<h2 data-markdown>The `::` Constant Namespace</h2>
+						<h2 data-markdown>The `::` Namespace Resolution Operator</h2>
 					</section>
 					<section>
 						<pre><code data-trim data-noescape>
@@ -213,14 +213,9 @@ class Foo
     obj == 1
   end
 end
-						</code></pre>
-						<pre class="fragment" ><code data-trim>
+
 foo = Foo.new
-						</code></pre>
-						<pre class="fragment" ><code data-trim>
 foo === 1 #=> true
-						</code></pre>
-						<pre class="fragment" ><code data-trim>
 foo == 1  #=> false
 						</code></pre>
 					</section>
@@ -268,7 +263,7 @@ end
 						<ul>
 							<li class="fragment">This method should return <code>true</code> if the two objects have the same <code>hash</code>.</li>
 							<li class="fragment">There is no programatic reason why that is true. It sometimes is not true. It is a worthless distinction.</li>
-							<li class="fragment"><code>Object#eql</code> is just an alias to <code>Object#==</code>, and this behavior is widely used.</li>
+							<li class="fragment"><code>Object#eql?</code> is just an alias to <code>Object#==</code>, and this behavior is widely used.</li>
 							<li class="fragment">The primary exceptions are <code>Numeric</code> types, in which <code>==</code> does type conversion, but <code>eql?</code> does not.</li>
 						</ul>
 						<em class="fragment">No.</em>
@@ -279,7 +274,7 @@ end
 				<section>
 					<section>
 						<h2>The Last Value</h2>
-						<img src="img/the_last_value.jpg">
+						<img src="images/the_last_value.jpg">
 					</section>
 					<section>
 						<pre><code data-trim data-noescape>
@@ -305,15 +300,12 @@ nunez = _   #=> #&lt;Person id: 5894674, name-last: "Nunez" ...&gt;
 					<section>
 						<pre><code data-trim>
 class Foobar
-  def method_missing(meth)
-    meth.to_s
+  def method_missing(name)
+    name.to_s
   end
 end
-						</code></pre>
-						<pre class="fragment"><code data-trim>
+
 foo = Foobar.new
-						</code></pre>
-						<pre class="fragment" ><code data-trim>
 foo.supercalifragilisticexpialidocious #=> "supercalifragilisticexpialidocious"
 						</code></pre>
 					</section>
@@ -338,14 +330,8 @@ foo.respond_to?(:supercalifragilisticexpialidocious) #=> false
 						<h2>The "truthiness" operator</h2>
 						<pre class="fragment"><code data-trim>
 nil | "false" #=> true
-						</code></pre>
-						<pre class="fragment"><code data-trim>
 nil | 0       #=> true
-						</code></pre>
-						<pre class="fragment"><code data-trim>
 nil | nil     #=> false
-						</code></pre>
-						<pre class="fragment"><code data-trim>
 nil | false   #=> false
 						</code></pre>
 					</section>
